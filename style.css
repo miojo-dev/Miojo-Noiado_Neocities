@@ -1,42 +1,75 @@
 /* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
    HTML content. To learn how to do something, just try searching Google for questions like
    "how to change link color." */
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Bitcount:wght@100..900&family=Bytesized&family=Short+Stack&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    /*colors primary*/
+    --bg-primary: #051412;
+    --fr-primary: #ebcfb2;
+    --accent-primary: #45b69c;
+
+    /*colors secondary*/
+    --bg-secondary: #051014;
+    --fr-secondary: #fbfbff;
+    --accent-secondary: #21d19f;
+
+    /*color middle ground*/
+    --md-ground: #787262;
+
+    /*fonts*/
+    --font-title: 'Bitcount Single', sans-serif;
+    --font-main-text: 'Ubuntu Mono', Courier, monospace;
+    --font-accent: 'Bitcount', sans-serif;
+    --font-detail: 'Bytesized', sans-serif;
+    --font-handwritten: 'Short Stack', sans-serif;
+}
+
 * {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-  background-color: black;
-  color: beige;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100%;
-  min-width: 100%;
+    background-color: var(--bg-primary);
+    color: var(--fr-primary);
+    font-family: var(--font-main-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+h1 {
+    font-family: var(--font-title);
+    font-weight: 900;
 }
 
 a {
-  font-style: normal;
-  color: teal;
+    font-style: italic;
+    font-family: var(--font-accent);
+    color: var(--accent-primary);
+    text-decoration: none;
 }
 
 a:hover {
-  color: #00afaf;
+    color: var(--accent-secondary);
+    text-decoration: underline;
 }
 
 .bola_canhao {
-  width: 30%;
+    width: 30%;
 }
 
 .wrapper {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-self: center;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-self: center;
 }
 
 .fourohfour {
-  width: 40%;
-  height: 40%;
+    width: 40%;
+    height: 40%;
 }
