@@ -1,7 +1,7 @@
 /* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
    HTML content. To learn how to do something, just try searching Google for questions like
    "how to change link color." */
-@import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Bitcount:wght@100..900&family=Bytesized&family=Short+Stack&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Bitcount+Grid+Single:wght@100..900&family=Bytesized&family=Short+Stack&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
     /*colors primary*/
@@ -18,7 +18,7 @@
     --md-ground: #787262;
 
     /*fonts*/
-    --font-title: 'Bitcount Single', sans-serif;
+    --font-title: 'Bitcount Grid Single', sans-serif;
     --font-main-text: 'Ubuntu Mono', Courier, monospace;
     --font-accent: 'Bitcount', sans-serif;
     --font-detail: 'Bytesized', sans-serif;
@@ -43,19 +43,54 @@ body {
 
 h1 {
     font-family: var(--font-title);
-    font-weight: 900;
+    font-weight: 345;
+    font-size: xxx-large;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: bottom; /* Keeps the text aligned with the cursor */
+
+    /* We animate to 25ch because there are 25 steps/characters */
+    animation: typing 2s steps(25, end);
+}
+
+.cursor {
+    font-family: var(--font-title);
+    font-weight: 345;
+    font-size: xxx-large;
+    text-decoration: underline;
+    display: inline-block;
+    color: var(--accent-primary);
+    vertical-align: bottom;
+    animation: blink-caret 0.75s step-end infinite;
+
+    /* SUPERPOWER 1: Nudge the cursor up or down without affecting the text */
+    transform: translateY(-4px);
+
+    /* SUPERPOWER 2: If the quirky font's "_" looks ugly, force a clean system font just for the cursor */
+    /* font-family: "Courier New", monospace; */
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to   { width: 25ch; } /* Matches your 25 steps */
+}
+
+@keyframes blink-caret {
+    from, to { opacity: 1; }
+    50%      { opacity: 0; }
 }
 
 a {
-    font-style: italic;
     font-family: var(--font-accent);
     color: var(--accent-primary);
     text-decoration: none;
+    font-size: larger;
+    font-weight: 300;
 }
 
 a:hover {
     color: var(--accent-secondary);
-    text-decoration: underline;
 }
 
 .bola_canhao {
@@ -72,4 +107,11 @@ a:hover {
 .fourohfour {
     width: 40%;
     height: 40%;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
 }
