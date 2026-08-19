@@ -19,4 +19,4 @@ jobs:
       uses: o-200/deploy-sites-neocities-red@v1
       with:
         # Neocities API token
-        key: 
+        key: secret.API
