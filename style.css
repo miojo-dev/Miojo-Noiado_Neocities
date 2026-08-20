@@ -110,6 +110,9 @@ a:hover {
 }
 
 footer {
+    font-family: var(--font-detail);
+    font-weight: bold;
+    font-size: large;
     width: 100%;
     position: absolute;
     bottom: 0;
