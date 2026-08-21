@@ -34,11 +34,18 @@ body {
     background-color: var(--bg-primary);
     color: var(--fr-primary);
     font-family: var(--font-main-text);
+    min-height: 100%;
+    min-width: 100%;
+}
+
+header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100%;
-    min-width: 100%;
+}
+
+main {
+    padding: 2.5rem;
 }
 
 h1 {
@@ -46,39 +53,17 @@ h1 {
     font-weight: 345;
     font-size: xxx-large;
     display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    vertical-align: bottom; /* Keeps the text aligned with the cursor */
-
-    /* We animate to 25ch because there are 25 steps/characters */
-    animation: typing 2s steps(25, end);
 }
 
-.cursor {
+h2 {
     font-family: var(--font-title);
-    font-weight: 345;
-    font-size: xxx-large;
-    text-decoration: underline;
-    display: inline-block;
-    color: var(--accent-primary);
-    vertical-align: bottom;
-    animation: blink-caret 0.75s step-end infinite;
-
-    /* SUPERPOWER 1: Nudge the cursor up or down without affecting the text */
-    transform: translateY(-4px);
-
-    /* SUPERPOWER 2: If the quirky font's "_" looks ugly, force a clean system font just for the cursor */
-    /* font-family: "Courier New", monospace; */
+    font-size: xx-large;
 }
 
-@keyframes typing {
-    from { width: 0; }
-    to   { width: 25ch; } /* Matches your 25 steps */
-}
-
-@keyframes blink-caret {
-    from, to { opacity: 1; }
-    50%      { opacity: 0; }
+h3 {
+    font-family: var(--font-title);
+    font-size: x-large;
+    font-weight: 350;
 }
 
 a {
@@ -107,6 +92,36 @@ a:hover {
 .fourohfour {
     width: 40%;
     height: 40%;
+}
+
+
+.title_wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: bottom;
+    animation: typing 2s steps(25, end);
+}
+
+.cursor {
+    font-family: var(--font-title);
+    font-weight: 345;
+    font-size: xxx-large;
+    text-decoration: underline;
+    display: inline-block;
+    color: var(--accent-primary);
+    vertical-align: bottom;
+    animation: blink-caret 0.75s step-end infinite;
+    transform: translateY(-4px);
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to   { width: 25ch; } /* Matches your 25 steps */
+}
+
+@keyframes blink-caret {
+    from, to { opacity: 1; }
+    50%      { opacity: 0; }
 }
 
 footer {
