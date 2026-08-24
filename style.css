@@ -80,7 +80,6 @@ a:hover {
 
 iframe {
     border: 1px solid var(--accent-primary);
-    box-shadow: 0 0 5px var(--accent-secondary);
 }
 
 .bola_canhao {
@@ -119,16 +118,32 @@ iframe {
     transform: translateY(-4px);
 }
 
-.carrousel
+.music-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-direction: row;
+    align-items: center;
+}
 
 @keyframes typing {
-    from { width: 0; }
-    to   { width: 25ch; } /* Matches your 25 steps */
+    from {
+        width: 0;
+    }
+    to {
+        width: 25ch;
+    }
+    /* Matches your 25 steps */
 }
 
 @keyframes blink-caret {
-    from, to { opacity: 1; }
-    50%      { opacity: 0; }
+    from, to {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }
 
 footer {
