@@ -78,6 +78,11 @@ a:hover {
     color: var(--accent-secondary);
 }
 
+iframe {
+    border: 1px solid var(--accent-primary);
+    box-shadow: 0 0 5px var(--accent-secondary);
+}
+
 .bola_canhao {
     width: 30%;
 }
@@ -114,6 +119,8 @@ a:hover {
     transform: translateY(-4px);
 }
 
+.carrousel
+
 @keyframes typing {
     from { width: 0; }
     to   { width: 25ch; } /* Matches your 25 steps */
@@ -129,7 +136,6 @@ footer {
     font-weight: bold;
     font-size: large;
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
-
 }
