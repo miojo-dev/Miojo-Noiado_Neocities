@@ -98,12 +98,18 @@ iframe {
     height: 40%;
 }
 
+.title_wrapper-welcome {
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: bottom;
+    animation: typing-welcome 2s steps(25, end);
+}
 
 .title_wrapper {
     overflow: hidden;
     white-space: nowrap;
     vertical-align: bottom;
-    animation: typing 2s steps(25, end);
+    animation: typing 2s steps(16, end);
 }
 
 .cursor {
@@ -127,14 +133,22 @@ iframe {
     align-items: center;
 }
 
-@keyframes typing {
+@keyframes typing-welcome {
     from {
         width: 0;
     }
     to {
         width: 25ch;
     }
-    /* Matches your 25 steps */
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 16ch;
+    }
 }
 
 @keyframes blink-caret {
@@ -148,8 +162,10 @@ iframe {
 
 footer {
     font-family: var(--font-detail);
+    display: flex;
     font-weight: bold;
     font-size: large;
+    justify-content: center;
     width: 100%;
     position: fixed;
     bottom: 0;
