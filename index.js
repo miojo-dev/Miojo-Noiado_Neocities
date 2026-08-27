@@ -1,17 +1,21 @@
-let main, footer;
+const year = new Date().getFullYear();
+const copyright = "100% Handmade material - original creations only - João Vitor Hobus " + year + " - Copyright - All rights reserved";
 
-debugger
+const header = document.createElement("header")
+const main = document.querySelector("main");
+const footer = document.createElement("footer");
 
-footer = `
-    <footer>
-        100% Handmade material - original creations only - João Vitor Hobus 2026 - Copyright - All rights reserved -
-    </footer>
+header.innerHTML = `
+    <header>
+        <div>
+            <h1 class="title_wrapper">Underground pool</h1><span class="cursor">&nbsp;</span>
+        </div>
+    </header>
 `;
 
-debugger
+footer.innerText = copyright;
 
-main = document.getElementsByTagName("main");
-
-debugger
-
+if (!document.querySelector("header")) {
+    main.before(header);
+}
 main.after(footer);
