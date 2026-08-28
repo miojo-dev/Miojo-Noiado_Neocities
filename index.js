@@ -1,3 +1,11 @@
+import {createIcons, CircleArrowLeft, CircleArrowRight} from 'lucide';
+
+createIcons({
+    icons: {
+        CircleArrowLeft, CircleArrowRight
+    }
+});
+
 const year = new Date().getFullYear();
 const copyright = "100% Handmade material - original creations only - João Vitor Hobus " + year + " - Copyright - All rights reserved";
 
@@ -19,3 +27,6 @@ if (!document.querySelector("header")) {
     main.before(header);
 }
 main.after(footer);
+
+let carrousel = document.querySelector(".carrousel");
+
