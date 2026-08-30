@@ -9,7 +9,9 @@
 <body>
 <main>
     <div class="grid carrousel">
-        <i data-lucide="circle-arrow-left"></i>
+        <button name="prev" id="prev-button">
+            <i data-lucide="CircleArrowLeft"></i>
+        </button>
         <div>
             <iframe data-testid="embed-iframe" style="border-radius:12px"
                     src="https://open.spotify.com/embed/playlist/74s4ZUJqpI9kdQ5QwnIfsJ?utm_source=generator&si=12b863a7540e4187"
@@ -42,7 +44,9 @@
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                     loading="lazy"></iframe>
         </div>
-        <i data-lucide="circle-arrow-right"></i>
+        <button name="next" id="next-button">
+            <i data-lucide="CircleArrowRight"></i>
+        </button>
     </div>
 </main>
 </body>
