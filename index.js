@@ -9,7 +9,7 @@ const playlist_Catalog = [
     "https://open.spotify.com/embed/playlist/4LhBVK4zqeMhTY01AQTDtL?utm_source=generator&si=7113254b0ae6489f"
 ];
 
-const header = document.createElement("header")
+const header = document.createElement("header");
 const main = document.querySelector("main");
 const footer = document.createElement("footer");
 
@@ -33,7 +33,7 @@ main.after(footer);
 ChangeIframeSrc("playlist-iframe", playlist_Catalog[0]);
 
 let carrousel = document.querySelector(".carrousel");
-let carrousel_Numbering = document.querySelector(".carrousel-numbering")
+let carrousel_Numbering = document.querySelector(".carrousel-numbering");
 
 carrousel_Numbering.innerText = playlist_Catalog.length;
 
@@ -54,8 +54,7 @@ function CarrouselHandler(direction) {
     }
 
     document.getElementById("current-item").innerText = current;
-    current--;
-    ChangeIframeSrc("playlist-iframe", playlist_Catalog[current])
+    ChangeIframeSrc("playlist-iframe", playlist_Catalog[current--]);
 }
 
 function ChangeIframeSrc(id, url) {
