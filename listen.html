@@ -10,11 +10,11 @@
 <main>
     <div class="carrousel">
         <div>
-            <button name="prev" id="prev-button" onclick="CarrouselHandler('prev')">
+            <button name="prev" id="prev-button" disabled onclick="CarrouselHandler('prev')">
                 <i data-lucide="CircleArrowLeft"></i>
             </button>
-            <iframe data-testid="embed-iframe" style="border-radius:12px"
-                    src="https://open.spotify.com/embed/playlist/74s4ZUJqpI9kdQ5QwnIfsJ?utm_source=generator&si=12b863a7540e4187"
+            <iframe data-testid="embed-iframe" id="playlist-iframe" style="border-radius:12px"
+                    src=""
                     width="100%" height="352" allowfullscreen=""
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                     loading="lazy"></iframe>
@@ -22,9 +22,9 @@
                 <i data-lucide="CircleArrowRight"></i>
             </button>
         </div>
+        <span id="current-item">1</span>
         <p class="carrousel-numbering">
         </p>
-        <span>1</span>
     </div>
 </main>
 </body>

@@ -30,13 +30,36 @@ if (!document.querySelector("header")) {
 }
 main.after(footer);
 
+ChangeIframeSrc("playlist-iframe", playlist_Catalog[0]);
+
 let carrousel = document.querySelector(".carrousel");
 let carrousel_Numbering = document.querySelector(".carrousel-numbering")
 
-carrousel_Numbering.innerText = 1;
+carrousel_Numbering.innerText = playlist_Catalog.length;
 
 function CarrouselHandler(direction) {
-    if (direction === "next") {
+    let current = document.getElementById("current-item").innerText;
 
+    if (direction === "prev") {
+        current--;
+    } else {
+        document.getElementsByTagName("prev").disabled = true;
+    }
+    if (current < playlist_Catalog.length) {
+        if (direction === "next") {
+            current++;
+        }
+    } else {
+        document.getElementsByTagName("next").disabled = true;
+    }
+
+    document.getElementById("current-item").innerText = current;
+    current--;
+    ChangeIframeSrc("playlist-iframe", playlist_Catalog[current])
+}
+
+function ChangeIframeSrc(id, url) {
+    if (document.getElementById(id)) {
+        document.getElementById(id).src = url;
     }
 }
