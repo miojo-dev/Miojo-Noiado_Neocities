@@ -10,7 +10,7 @@
 <main>
     <div class="carrousel">
         <div>
-            <button name="prev" id="prev-button" disabled onclick="CarrouselHandler('prev')">
+            <button name="prev" id="prev-button" onclick="CarrouselHandler('prev')">
                 <i data-lucide="CircleArrowLeft"></i>
             </button>
             <iframe data-testid="embed-iframe" id="playlist-iframe" style="border-radius:12px"
@@ -22,9 +22,12 @@
                 <i data-lucide="CircleArrowRight"></i>
             </button>
         </div>
-        <span id="current-item">1</span>
-        <p class="carrousel-numbering">
-        </p>
+        <div>
+            <span id="current-item">1</span>
+            <p>/</p>
+            <span class="carrousel-numbering">
+            </span>
+        </div>
     </div>
 </main>
 </body>

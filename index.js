@@ -40,21 +40,19 @@ carrousel_Numbering.innerText = playlist_Catalog.length;
 function CarrouselHandler(direction) {
     let current = document.getElementById("current-item").innerText;
 
-    if (direction === "prev") {
+    if (direction === "prev" && current > 1) {
         current--;
-    } else {
-        document.getElementsByTagName("prev").disabled = true;
-    }
-    if (current < playlist_Catalog.length) {
-        if (direction === "next") {
-            current++;
-        }
-    } else {
-        document.getElementsByTagName("next").disabled = true;
+        document.getElementsByTagName("prev").disabled = current <= 1;
+    } else if (direction === "next" && current < playlist_Catalog.length) {
+        current++;
+        document.getElementsByTagName("next").disabled = current >= playlist_Catalog.length;
     }
 
-    document.getElementById("current-item").innerText = current;
-    ChangeIframeSrc("playlist-iframe", playlist_Catalog[current--]);
+    if (current !== document.getElementById("current-item").innerText  )
+    {
+        document.getElementById("current-item").innerText = current;
+        ChangeIframeSrc("playlist-iframe", playlist_Catalog[current - 1]);
+    }
 }
 
 function ChangeIframeSrc(id, url) {
