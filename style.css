@@ -1,21 +1,18 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
 @import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Bitcount+Grid+Single:wght@100..900&family=Bytesized&family=Short+Stack&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
     /*colors primary*/
-    --bg-primary: #051412;
-    --fr-primary: #ebcfb2;
-    --accent-primary: #45b69c;
+    --bg-primary: #051412ff;
+    --fr-primary: #ebcfb2ff;
+    --accent-primary: #45b69cff;
 
     /*colors secondary*/
-    --bg-secondary: #051014;
-    --fr-secondary: #fbfbff;
-    --accent-secondary: #21d19f;
+    --bg-secondary: #051014ff;
+    --fr-secondary: #fbfbffff;
+    --accent-secondary: #21a19aff;
 
     /*color middle ground*/
-    --md-ground: #787262;
+    --md-ground: #787262ff;
 
     /*fonts*/
     --font-title: 'Bitcount Grid Single', sans-serif;
@@ -78,6 +75,28 @@ a:hover {
     color: var(--accent-secondary);
 }
 
+button {
+    font-family: var(--font-accent);
+    color: var(--accent-primary);
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding: .5rem;
+    border: none;
+    border-radius: .75rem;
+    background-color: calc(var(--accent-secondary) - 80);
+    transition: .1s ease-in-out;
+}
+
+button:hover {
+    background-color: #44444480;
+}
+
+button:active {
+    transition: none;
+    background-color: #44444440;
+}
+
 iframe {
     border: 1px solid var(--accent-primary);
 }
@@ -124,12 +143,18 @@ iframe {
     transform: translateY(-4px);
 }
 
-.music-section {
+.carrousel {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.carrousel > div{
+    display: flex;
     flex-direction: row;
+    gap: 1rem;
     align-items: center;
 }
 
