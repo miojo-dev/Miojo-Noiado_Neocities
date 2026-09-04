@@ -1,0 +1,22 @@
+name: Neocities Deploy
+
+on:
+    push:
+      branches:
+
+    workflow_dispatch:
+      
+  jobs:
+    install-neoticies:
+      name: Install Neocities CLI
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: install ruby
+        shell: bash
+        run: sudo apt install ruby -y
+
+        - name: install neocities
+        shell: bash
+        run: gem install neocities
+        
